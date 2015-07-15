@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <title>Debate Society of Berkeley</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css/bootstrap.min.css">
+    <style type="text/css">
+		/* BOOTSTRAP 3.x GLOBAL STYLES
+		-------------------------------------------------- */
+
+		body {
+		  padding-top: 100px;
+		  padding-bottom: 1px;
+		  font-size: 15px;
+		  font-family:Gilda Display;
+		}
+		div{
+		  display:block;
+		}
+		h2{
+		  font-family: Cinzel;
+		  color: #FFC918;
+		}
+
+
+
+		/* CUSTOMIZE THE NAVBAR
+		-------------------------------------------------- */
+
+		/* Special class on .container surrounding .navbar, used for positioning it into place. */
+		.navbar-wrapper {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  z-index: 15;
+		  
+		}
+
+		#top{
+		  padding-top:50px;
+
+		}
+		#navi {
+		  float:right;
+		  background-color:#FFF;
+		  font-family: Cinzel;
+		  padding-right:50px;
+		  font-size:20px;
+		  padding-top:20px;
+		  
+		}
+		#topbar{
+		  background-color:#FFF;
+		  font-family: Cinzel;
+		  padding-left:15px;
+		  border-bottom: 1px black solid;
+		}
+		#index{
+		  font-size:35px;
+		  font-family: Cinzel;
+		  padding-top:30px;
+		}
+
+
+		/* CUSTOMIZE THE CAROUSEL
+		-------------------------------------------------- */
+
+		/* Carousel base class */
+		.carousel {
+		  /*background-color:black;*/
+		  margin-top: 50px;
+		  margin-bottom: 40px;
+		}
+		/* Since positioning the image, we need to help out the caption */
+		.carousel-caption {
+		  z-index: 10;
+		}
+
+		/* Declare heights because of positioning of img element */
+		.carousel .item {
+		  height: 400px;
+		  background-color:#FFF;
+		}
+		.carousel img {
+		  position: center;
+		  top: 0;
+		  left: 0;
+		  right: 100;
+		  min-height: 400px;
+		}
+
+		#tagline{
+		  color:#FFF;
+		}
+
+		/* MARKETING
+		-------------------------------------------------------*/
+		#news{
+		  display: inline;
+		  margin-left:80px;
+		  
+		}
+		#accomplish{
+		  display: inline;
+		  margin-left: 180px;
+		  font-size: 18px;
+		  color:blue;
+
+		}</style>
+</head>
+<body ng-app="debateApp" ng-controller="BaseCtrl">
+	<link href="http://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet" type="text/css" class="">
+	<link href="http://fonts.googleapis.com/css?family=Gilda+Display" rel="stylesheet"
+	type="text/css" class="">
+	<div class="navbar-wrapper">
+	    <div class="row" id="top">
+	        <div class="navbar navbar-fixed navbar-fixed-top" id="topbar">
+	            <div class="navbar-header"> <a class="navbar-brand" id="index" href="/#/">Debate Society of Berkeley</a>
+	            </div>
+	            <div class="navbar navbar-fixed navbar-fixed" id="navi">
+	                <div class="collapse navbar-collapse">
+	                <ul class="nav navbar-nav">
+	                    <li class="active"><a href="/#/AboutUs" class="">About</a>
+	                    </li>
+	                    <li><a href="./team.html" class="">Team</a>
+	                    </li>
+	                    </li>
+	                    <li><a href="./events.html" class="">Events</a>
+	                    </li>
+	                    <li><a href="./resources.html" class="">Resources</a>
+	                    </li>
+	                    <li class="divider-vertical"></li>
+	                    <li><a href="./join.html" class="">Join</a>
+	                    </li>
+	                    <li><a href="./contact.html" class="">Contact</a>
+	                    </li>
+	                </ul>
+	              </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<div ng-view></div>
+	<script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-route.min.js"></script>
+    <script src="module.js"></script>
+    <% scripts.forEach(function(file) { %>
+    <script src= <%=file%>></script>
+    <% }); %>
+</body>

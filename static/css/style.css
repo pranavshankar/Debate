@@ -1,0 +1,24 @@
+.header {
+	width: 100%;
+	background-color: white;
+}
+
+.firstItem {
+	width: 50%;
+	display: inline-block;
+	text-align: left;
+}
+
+.firstItem:hover {
+	background-color: gray;
+}
+
+.item {
+	width: 12%;
+	display: inline-block;
+	text-align: center;	
+}
+
+.item:hover {
+	background-color: gray;
+}

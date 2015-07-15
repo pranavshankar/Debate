@@ -1,0 +1,79 @@
+<div ng-controller="IndexCtrl">	
+	<div id="myCarousel" class="carousel slide">
+	    <!-- Indicators -->
+	    <center>
+	        <img src="img/berkeleyDebateFront.jpg"
+	        class="img-responsive">
+	    </center>
+	    <div class="container">
+	        <div class="carousel-caption">
+	             <h1 class="" id="tagline">The Premier Debate Society of Berkeley</h1>
+
+	        </div>
+	    </div>
+	</div>
+	<br/><br/><br/>
+	<div class="container marketing">
+	    <!-- Three columns of text below the carousel -->
+	    <div class="row">
+	        <div class="col-md-4 text-center">
+	            <img class="img-square" height="140" src="img/writing.png">
+	             <h2 class="" id="subheader">Prepare</h2>
+	            <p class="">Attend weekly meetings and mock debates to hone your skills.</p>           
+	        </div>
+	        <div class="col-md-4 text-center">
+	            <img class="img-square" height="140" src="img/airplane.png">
+	             <h2 class="" id="subheader">Travel</h2>
+
+	            <p class="">Travel to the some of the best universities in the country.</p>   
+	        </div>
+	        <div class="col-md-4 text-center">
+	            <img class="img-square" height="140" src="img/quotes.png">
+	             <h2 class="" id="subheader">Compete</h2>
+	            <p class="">Debate against the best debators in the league and the nation.</p>
+	        </div>
+	    </div>
+	</div>
+	<br />
+	<br />
+	<div class="header">
+	  <a id="news" href="/#/Events">
+	  	<h2>Upcoming events</h2>
+	  </a>
+	  <br/> 
+	  <div ng-repeat='(key, event) in events'>
+	  	<ul>
+	  		<a ng-href="{{event.link}}">
+	  			<div id="accomplish">
+	  				{{event.title}}
+	  			</div>
+	  		</a>
+	  	</ul>
+	  </div>
+	  	<ul>
+		  	<a href="/#/Events">
+		  		<div id="accomplish">
+		  			More events
+		  		</div>
+		  	</a>
+	  	</ul>
+	</div>
+	<br />
+	<br />
+	<br />
+	<div class="header">
+	  <h2 id="news">News</h2> 
+		<div ng-repeat="(key, story) in stories">
+		  <ul> 
+		  	<div id = "accomplish">
+		  		{{story.title}}
+		  	</div>
+		  </ul>
+		</div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+</div>
+
